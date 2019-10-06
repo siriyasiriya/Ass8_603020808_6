@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp"
+    tools:context=".InsertActivity">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Employee Form"
+        android:textSize="25dp"
+        android:textStyle="bold|italic" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow>
+
+            <TextView
+                android:text="Name: "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="300dp"
+                android:inputType="text" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Gender:"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:layout_marginLeft="20dp"
+                android:id="@+id/radio_group_gender"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textSize="20sp"/>
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textSize="20sp"/>
+            </RadioGroup>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="E-mail: "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:inputType="textEmailAddress" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:text="Salary: "
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edt_salary"
+                android:inputType="number" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="30dp">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#ee1ece60"
+            android:onClick="addEmployee"
+            android:text="Add"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/btn_add"
+            android:background="#F44336"
+            android:onClick="reset"
+            android:text="Reset"
+            android:textColor="#fff"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</LinearLayout>
